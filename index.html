@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Puissance 4</title>
+</head>
+
+<body class="dark">
+
+    <div class="app">
+
+        <h1>Connect 4</h1>
+        <div class="scores">
+            <p>Player 1: <span id="p1">0</span></p>
+            <p>Player 2: <span id="p2">0</span></p>
+        </div>
+
+        <canvas id="canvas"></canvas>
+
+        <div class="buttons">
+            <button id="restart">Restart</button>
+            <button id="reset">Reset</button>
+        </div>
+
+    </div>
+
+    <!-- Options menu -->
+    <div class="dropdown">
+        <button class="btn"><span>⚙️</span></button>
+        <div class="dropdown-content">
+            <a id="light" href="#">Light</a>
+            <a id="dark" href="#">Dark</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/board.js"></script>
+    <script src="assets/js/piece.js"></script>
+    <script src="assets/js/player.js"></script>
+    <script src="assets/js/input.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
