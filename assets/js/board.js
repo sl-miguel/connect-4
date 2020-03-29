@@ -1,12 +1,21 @@
-
+/**
+ * Class to create the game board 
+ */
 class Board {
 
+    /**
+     * @param {Object} canvas - Canvas of html element
+     */
     constructor(canvas) {
 
-        // BOARD ARRAY
+        /**
+         * @property {Array} table - Board array 
+         */
         this.table = [];
 
-        // BOARD RULES
+        /**
+         * @property {Object} rule - Board Rules 
+         */
         this.rule = {
 
             // 6, 7
@@ -17,7 +26,9 @@ class Board {
 
         }
 
-        // BOARD SIZES
+        /**
+         * @property {Object} size - Board Sizes
+         */
         this.size = {
 
             width: canvas.width,
@@ -30,7 +41,9 @@ class Board {
 
         }
 
-        // BOARD STYLES
+        /**
+         * @property {Object} style - Board Styles
+         */
         this.style = {
 
             board: {
@@ -47,7 +60,9 @@ class Board {
 
     }
 
-    // CREATE BOARD ARRAY
+    /**
+     * @property {Function} create - Creates a empty board
+     */
     create() {
 
         // Lignes
@@ -68,12 +83,23 @@ class Board {
 
     }
 
-    // CHECK CONNECT 4
+    /**
+     * @property {Function} isConnect4 - Checks if all parameters are the same
+     * @param {string} a 
+     * @param {string} b
+     * @param {string} c
+     * @param {string} d
+     * @returns {Boolean} - Returns true if all parameters are the same
+     */
     isConnect4(a, b, c, d) {
         return (a === b && b === c && c === d && a !== "")
     }
 
-    // CHECK WIN
+    /**
+     * @property {Function} isWin - Check win 
+     * @param {Object} piece - Piece object
+     * @returns {Boolean} - Returns true if win 
+     */
     isWin(piece) {
 
         // HORIZONTAL
@@ -169,7 +195,10 @@ class Board {
         }
     }
 
-    // CHECK TIE
+    /**
+     * @property {Function} isTie - Check tie 
+     * @returns {Boolean} - Returns true if board is full 
+     */
     isTie() {
     
         let index = 0;
@@ -191,7 +220,10 @@ class Board {
 
     // =========================== DRAW PART ============================ //
 
-    // DRAW BOARD ON CANVAS
+    /**
+     * @property {Function} draw - Draw board on canvas
+     * @param {object} ctx - Context of canvas
+     */
     draw(ctx) {
 
         ctx.fillStyle = this.style.board.color;
@@ -222,7 +254,11 @@ class Board {
 
     }
 
-    // DRAW WIN SCREEN
+    /**
+     * @property {Function} drawWinText - Draw win screen
+     * @param {object} ctx - Context of canvas
+     * @param {object} player - Player object
+     */
     drawWinText(ctx, player) {
 
         // BACKGROUND WITH SOME OPACITY
@@ -242,7 +278,10 @@ class Board {
 
     }
 
-    // DRAW TIE SCREEN
+    /**
+     * @property {Function} drawTieText - Draw tie screen
+     * @param {object} ctx - Context of canvas
+     */
     drawTieText(ctx) {
 
         // BACKGROUND WITH SOME OPACITY
