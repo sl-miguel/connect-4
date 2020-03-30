@@ -273,7 +273,7 @@ class Board {
         ctx.shadowBlur = 30;
         ctx.fillStyle = player.color;
         ctx.textAlign = "center";
-        ctx.fillText(`${player.color} wins`, (this.size.width / 2) - 13, this.size.height / 2);
+        ctx.fillText(`${player.name} wins`, (this.size.width / 2) - 13, this.size.height / 2);
         ctx.shadowBlur = 0;
 
     }

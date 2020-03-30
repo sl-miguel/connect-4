@@ -5,13 +5,15 @@ class Player {
         this.players = {
 
             p1:  {
+                name: "Player 1",
                 score: 0,
-                color: "red"
+                color: "#ff0000"
             },
 
             p2: {
+                name: "Player 2",
                 score: 0,
-                color: "yellow"
+                color: "#ffff00"
             }
         }
 

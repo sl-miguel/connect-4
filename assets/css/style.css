@@ -143,10 +143,16 @@ p span {
     width: 100%;
     transition: opacity .15s ease-out;
 }
+
+.dropdown-text {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+}
   
 .dropdown-content a {
     display: block;
-    padding: 12px 16px;
+    padding: 12px 0;
     text-align: center;
     color: var(--text);
     text-decoration: none;
@@ -176,4 +182,45 @@ p span {
   
 .btn:hover {
     background-color: #6c5ce7;
+}
+
+
+/* Color input */
+.input-color-container {
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.input-color-container:hover {
+    background-color: var(--bg-dropdown-h);
+}
+
+.input-color-circle {
+    position: relative;
+    overflow: hidden;
+    width: 2rem;
+    height: 2rem;
+    border: solid 2px var(--border-color);
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-color {
+    position: absolute;
+    right: -10px;
+    top: -8px;
+    width: 56px;
+    height: 56px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.input-color-label {
+    display: block;
+    padding: 5px 0;
+    cursor: pointer;
+    text-align: center;
+    color: var(--text);
 }

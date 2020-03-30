@@ -39,6 +39,25 @@ class InputHandler {
             player.restart();
         });
 
+        // Change colors
+
+        const p1 = document.querySelector("#input-color-p1");
+        const p2 = document.querySelector("#input-color-p2");
+        
+        p1.value = player.players.p1.color;
+        p2.value = player.players.p2.color;
+
+        p1.addEventListener('input', function() {
+            
+            player.players.p1.color = this.value;
+
+        })
+        
+        p2.addEventListener('input', function() {
+            
+            player.players.p2.color = this.value;
+
+        })
 
         // Mode nuit
         const darkButton = document.querySelector('#dark');
@@ -59,6 +78,7 @@ class InputHandler {
             document.body.classList.replace('dark', 'light');
             localStorage.setItem('theme', 'light');
         };
+
 
     }
 }
